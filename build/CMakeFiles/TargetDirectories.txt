@@ -1,0 +1,3 @@
+/home/lsc/devs/chatServer/build/CMakeFiles/chatServer.dir
+/home/lsc/devs/chatServer/build/CMakeFiles/edit_cache.dir
+/home/lsc/devs/chatServer/build/CMakeFiles/rebuild_cache.dir

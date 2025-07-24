@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lsc/devs/chatServer/build",
+  "command": "/usr/bin/g++ -g -std=gnu++11 -o CMakeFiles/chatServer.dir/muduo_server.cpp.o -c /home/lsc/devs/chatServer/testMuduo/muduo_server.cpp",
+  "file": "/home/lsc/devs/chatServer/testMuduo/muduo_server.cpp"
+}
+]
