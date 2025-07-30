@@ -22,3 +22,21 @@ telnet 是一个用于远程登录和网络测试的命令行工具，它基于 
 - 编译命令：cmake --build build
 - 使用cmake命令进行编译，cmake . 会在当前目录下生成build目录，编译后的可执行文件会在build目录下。
 - 清除cmake编译：cmake --build build --target clean
+
+## WSL安装MySQL
+
+- sudo apt install mysql-server -y
+- 启动MySQL sudo /etc/init.d/mysql start  或者sudo service mysql start
+- 首次登陆使用sudo mysql
+- 设置密码：
+- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Aa123456';
+- FLUSH PRIVILEGES;
+- 关闭mysql服务：sudo service mysql stop
+- 之后登陆使用 mysql -u root -p
+
+- 查看MySQL默认的字符编码：show variables like "char%"
+- 使用sudo netstat -tanp查看MySQL服务是否启动，默认监听3306端口
+
+- 创建数据库CREATE DATABASE new_db_name
+  DEFAULT CHARACTER SET utf8mb4
+  COLLATE utf8mb4_general_ci;

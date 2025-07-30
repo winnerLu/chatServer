@@ -1,0 +1,7 @@
+# ninja log v5
+0	2	0	clean	a31eedcededa8236
+0	382	1753775538788442645	src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o	82038cc45f31b28e
+1	6	0	clean	a31eedcededa8236
+3	525	1753883288889852030	src/server/CMakeFiles/ChatServer.dir/main.cpp.o	178d0435207812ee
+3	569	1753883288929851446	src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o	82038cc45f31b28e
+569	1155	1753883289519842545	../bin/ChatServer	2a955ae6cb620cd8

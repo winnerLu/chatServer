@@ -6,29 +6,10 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: chatServer
+# Project: chat
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
-
-#############################################
-# Rule for compiling CXX files.
-
-rule CXX_COMPILER__chatServer_Debug
-  depfile = $DEP_FILE
-  deps = gcc
-  command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building CXX object $out
-
-
-#############################################
-# Rule for linking CXX executable.
-
-rule CXX_EXECUTABLE_LINKER__chatServer_Debug
-  command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
-  description = Linking CXX executable $TARGET_FILE
-  restat = $RESTAT
-
 
 #############################################
 # Rule for running custom commands.
@@ -39,10 +20,29 @@ rule CUSTOM_COMMAND
 
 
 #############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__ChatServer_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX executable.
+
+rule CXX_EXECUTABLE_LINKER__ChatServer_Debug
+  command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking CXX executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/lsc/devs/chatServer/testMuduo -B/home/lsc/devs/chatServer/build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/lsc/devs/chatServer -B/home/lsc/devs/chatServer/build
   description = Re-running CMake...
   generator = 1
 
